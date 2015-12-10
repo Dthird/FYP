@@ -1,0 +1,28 @@
+#ifndef DIFFERENCE_H
+#define DIFFERENCE_H
+
+#include "llvm/ADT/SmallVector.h"
+#include <cmath>
+
+using namespace llvm;
+
+#define PROGRAM_SMALL_VECTOR_SIZE 10
+#define FUNCTION_LEVEL_THRESHOLD 0.01
+
+typedef struct c_vector{
+    double x;
+    double y;
+    double z;
+    double w;
+} C_vector;
+
+double CDD(C_vector c1, C_vector c2);
+
+unsigned getFunctionNumber(SmallVector<std::pair<std::string, C_vector>, PROGRAM_SMALL_VECTOR_SIZE>
+                           p);
+
+double ASD(SmallVector<std::pair<std::string, C_vector>, PROGRAM_SMALL_VECTOR_SIZE> p1, 
+           SmallVector<std::pair<std::string, C_vector>, PROGRAM_SMALL_VECTOR_SIZE> p2);
+
+
+#endif

@@ -1,0 +1,31 @@
+$def with (user)
+<html>
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    	<title>用户信息</title>
+    </head>
+    <body>
+	<p><font size="4"><b>用户：</b>$user['user_id'] &nbsp <b>剩余尝试次数：</b>$user['attempts'] &nbsp <b><a href="/logout">登出</a></b></font></p>
+	<hr></hr>
+	<p><font size="4">
+	    <div><b>上传要求:</b> 1.上传次数限制<br></div>
+	    <div style="text-indent:5em">2.文件大小限制</div>
+	    <div style="text-indent:5em">3.文件格式限制</div>
+	    <div style="text-indent:5em">4.每个小组仅上传一份文件即可，由小组组长负责上传</div>
+	    <div style="text-indent:5em">5.<a href="/download">样例</a></div>
+	    <a href="/upload">上传实验</a>
+	</font></p>
+	<hr></hr>
+	
+	<p><font size="4">
+	    <b>提交结果说明：</b>根据结果的不同可能会给予不同的分数折扣。
+	</font></p>
+
+	<p><font size="4">
+	    <div><b>上一次提交结果：</b><br></div>
+	    <div style="text-indent:5em"><b>与历史版本比较:</b>$user['result_history']</div>
+	    <div style="text-indent:5em"><b>与上传版本比较:</b>$user['result_uploaded']</div>
+	</font></p>
+	
+    <body>
+</html>

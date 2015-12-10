@@ -1,0 +1,8 @@
+import os
+
+val = os.popen('./test ./C.bc ./D.bc').read()
+val_f = float(val)
+if val_f >= 0 and val_f <= 1:
+    print val_f
+else:
+    print 'error!\n'

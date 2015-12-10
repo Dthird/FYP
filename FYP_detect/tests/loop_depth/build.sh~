@@ -1,0 +1,4 @@
+#!/bin/tcsh
+
+clang++ -g simple_module_pass.cpp \
+`llvm-config --libs core irreader linker option bitwriter support all-targets --cxxflags --ldflags` -lpthread -ldl -o test
